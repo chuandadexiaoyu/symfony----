@@ -36,3 +36,5 @@ to know how to create good bundles, and this basically means that you need to kn
 good service definitions. There are many ways to do this, and in this chapter I will describe most
 of them. Knowing your options enables you to make better choices when looking for a dependency
 injection pattern.
+
+Overall, the purpose of the kernel.request event is either to create and return a Response directly, or to add information to the Request (e.g. setting the locale or setting some other information on the Request attributes).
