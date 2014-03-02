@@ -38,3 +38,11 @@ of them. Knowing your options enables you to make better choices when looking fo
 injection pattern.
 
 Overall, the purpose of the kernel.request event is either to create and return a Response directly, or to add information to the Request (e.g. setting the locale or setting some other information on the Request attributes).
+
+Scopes add a constraint on the dependencies of a service: a service cannot depend on services from a narrower
+scope. For example, if you create a generic my_foo service, but try to inject the request component, you’ll receive a
+Symfony\Component\DependencyInjection\Exception\ScopeWideningInjectionException
+when compiling the container. Read the sidebar below for more details.
+
+A bundle must not embed third-party PHP libraries. It should rely on the standard Symfony2 autoloading instead.
+A bundle should not embed third-party libraries written in JavaScript, CSS, or any other language.
